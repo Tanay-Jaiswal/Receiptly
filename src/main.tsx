@@ -11,7 +11,10 @@ const colors = ['#e96b48', '#2e7d68', '#e8ad43', '#7d6bb4', '#dd8aa1', '#547aa5'
 
 function App() {
   const [data, setData] = useState<ReceiptData>(fallback)
-  const [view, setView] = useState<'story' | 'patterns' | 'explore'>('story')
+  const [view, setView] = useState<'story' | 'patterns' | 'explore'>(() => {
+    const hash = window.location.hash.slice(1)
+    return hash === 'patterns' || hash === 'explore' ? hash : 'story'
+  })
   const [menu, setMenu] = useState(false)
   const [selected, setSelected] = useState<string | null>(null)
   useEffect(() => {
@@ -24,11 +27,12 @@ function App() {
       })
       .catch(() => {})
   }, [])
-  const navigate = (v: typeof view) => { setView(v); setMenu(false); window.scrollTo({ top: 0, behavior: 'smooth' }) }
+  const navigate = (v: typeof view) => { setView(v); window.history.replaceState(null, '', `#${v}`); setMenu(false); window.scrollTo({ top: 0, behavior: 'smooth' }) }
   return <div className="app">
-    <header className="nav"><a className="brand" onClick={() => navigate('story')}><span className="brand-mark"><Receipt size={18}/></span> receiptly</a>
-      <nav className={menu ? 'nav-links open' : 'nav-links'}><button className={view === 'story' ? 'active' : ''} onClick={() => navigate('story')}>The story</button><button className={view === 'patterns' ? 'active' : ''} onClick={() => navigate('patterns')}>Patterns</button><button className={view === 'explore' ? 'active' : ''} onClick={() => navigate('explore')}>Explore</button></nav>
-      <button className="menu-btn" onClick={() => setMenu(!menu)}>{menu ? <X/> : <Menu/>}</button>
+    <a className="skip-link" href="#main-content">Skip to content</a>
+    <header className="nav"><button className="brand" onClick={() => navigate('story')} aria-label="Receiptly home"><span className="brand-mark"><Receipt size={18}/></span> receiptly</button>
+      <nav aria-label="Primary navigation" className={menu ? 'nav-links open' : 'nav-links'}><button className={view === 'story' ? 'active' : ''} aria-current={view === 'story' ? 'page' : undefined} onClick={() => navigate('story')}>The story</button><button className={view === 'patterns' ? 'active' : ''} aria-current={view === 'patterns' ? 'page' : undefined} onClick={() => navigate('patterns')}>Patterns</button><button className={view === 'explore' ? 'active' : ''} aria-current={view === 'explore' ? 'page' : undefined} onClick={() => navigate('explore')}>Explore</button></nav>
+      <button className="menu-btn" aria-label={menu ? 'Close menu' : 'Open menu'} onClick={() => setMenu(!menu)}>{menu ? <X/> : <Menu/>}</button>
     </header>
     {view === 'story' && <Story data={data} navigate={navigate}/>}
     {view === 'patterns' && <Patterns data={data} selected={selected} setSelected={setSelected}/>}
@@ -39,7 +43,7 @@ function App() {
 
 function Story({ data, navigate }: { data: ReceiptData; navigate: (v: 'patterns' | 'explore') => void }) {
   const chapter = data.chapters[0]
-  return <main className="story">
+  return <main className="story" id="main-content">
     <section className="hero"><div className="eyebrow"><Sparkles size={14}/> a small mirror for big habits</div><h1>{chapter ? <span dangerouslySetInnerHTML={{ __html: chapter.title }}/> : <>Your spending<br/><em>has a shape.</em></>}</h1><p className="hero-copy">{chapter?.body || 'Receiptly turns everyday transactions into a quiet, human story — so you can notice what your numbers are trying to say.'}</p><button className="primary" onClick={() => navigate('patterns')}>See the whole picture <ChevronRight size={17}/></button><div className="hero-note"><span className="dot"/> A private, playful look at {data.meta.dedupedRecords.toLocaleString()} deduped moments</div></section>
     <section className="receipt-wrap"><div className="receipt-paper"><div className="receipt-top"><span>RECEIPTLY / ALL YEARS</span><Leaf size={16}/></div><div className="receipt-title">three sources,<br/><strong>one little story.</strong></div><div className="receipt-line"/><div className="mini-row"><span>spending moments</span><b>{formatINR(data.aggregates.spendTotal)}</b></div><div className="mini-bars">{data.aggregates.categories.slice(0, 7).map((item, i) => <i key={item.name} style={{height:`${Math.max(item.share * .5, 7)}px`, background: colors[i % colors.length]}}/> )}</div><div className="receipt-line"/><div className="receipt-total"><span>THE TAKEAWAY</span><strong>{data.aggregates.spotify.minutes.toLocaleString()} minutes<br/>have a soundtrack.</strong></div><div className="barcode">▌▌▌ ▌▌ ▌▌▌▌ ▌▌▌ ▌</div></div></section>
     <section className="manifesto"><p className="eyebrow">THE STORY, IN CHAPTERS</p><h2>Not a budget.<br/><span>A little more <em>honest.</em></span></h2><div className="chapter-list">{data.chapters.slice(1).map((item, i) => <article className="chapter" key={item.id}><span>0{i + 1}</span><div><p className="eyebrow">{item.kicker}</p><h3 dangerouslySetInnerHTML={{ __html: item.title }}/><p>{item.body}</p></div><strong>{item.metric}</strong></article>)}</div></section>
@@ -49,7 +53,7 @@ function Story({ data, navigate }: { data: ReceiptData; navigate: (v: 'patterns'
 
 function Patterns({ data, selected, setSelected }: { data: ReceiptData; selected: string | null; setSelected: (x: string | null) => void }) {
   const totals = data.aggregates.categories; const max = Math.max(...totals.map(x => x.amount), 1)
-  return <main className="patterns page"><div className="page-intro"><div><p className="eyebrow">PATTERN 01 / THE BIG PICTURE</p><h1>The shape of<br/><em>everyday.</em></h1></div><p className="lede">Household choices, card purchases and listening rituals — one combined, deduped story.</p></div>
+  return <main className="patterns page" id="main-content"><div className="page-intro"><div><p className="eyebrow">PATTERN 01 / THE BIG PICTURE</p><h1>The shape of<br/><em>everyday.</em></h1></div><p className="lede">Household choices, card purchases and listening rituals — one combined, deduped story.</p></div>
     <div className="stats"><div><span>Combined outflow</span><strong>{formatINR(data.aggregates.spendTotal)}</strong><small><ArrowUpRight size={13}/> household + card</small></div><div><span>Most-loved category</span><strong>{totals[0]?.name || '—'}</strong><small>{totals[0]?.share || 0}% of all spending</small></div><div><span>Listening hours</span><strong>{Math.round(data.aggregates.spotify.minutes / 60).toLocaleString()}</strong><small>{data.aggregates.spotify.skipRate}% skipped</small></div></div>
     <section className="chart-card"><div className="card-head"><div><p className="eyebrow">WHERE IT GOES</p><h2>The everyday mix</h2></div><span className="hint">tap a bar to peek</span></div><div className="bars">{totals.slice(0, 8).map((item, i) => <button className={selected === item.name ? 'bar-row selected' : 'bar-row'} key={item.name} onClick={() => setSelected(selected === item.name ? null : item.name)}><span className="bar-label">{item.name}</span><span className="bar-track"><motion.i initial={{width:0}} animate={{width:`${item.amount / max * 100}%`}} transition={{delay:i*.05}} style={{background:colors[i % colors.length]}}/></span><b>{formatINR(item.amount)}</b></button>)}</div></section>
     <div className="patterns-grid">{data.patterns.map(pattern => <div className={`pattern-card ${pattern.tone}`} key={pattern.id}><p className="eyebrow">{pattern.label}</p><h3>{pattern.title}</h3><strong>{pattern.value}</strong><p>{pattern.description}</p></div>)}</div>
@@ -58,8 +62,9 @@ function Patterns({ data, selected, setSelected }: { data: ReceiptData; selected
 }
 
 function Explore({ data }: { data: ReceiptData }) {
-  const [q, setQ] = useState(''); const rows = useMemo(() => data.rows.filter(r => `${r.category} ${r.subcategory}`.toLowerCase().includes(q.toLowerCase())).slice(0, 30), [data.rows, q])
-  return <main className="page explore"><div className="page-intro"><div><p className="eyebrow">PATTERN 02 / GET CURIOUS</p><h1>Look a little<br/><em>closer.</em></h1></div><p className="lede">Search the tiny moments that make up the bigger picture. Identity never arrives here.</p></div><div className="search"><span>⌕</span><input value={q} onChange={e => setQ(e.target.value)} placeholder="Try “food”, “travel”, or “online shopping”..." /><Download size={17}/></div><div className="table-wrap"><div className="table-head"><span>WHEN</span><span>THE LITTLE THING</span><span>HOW MUCH</span></div>{rows.map(r => <div className="table-row" key={r.id}><span>{r.date.split(' ')[0]}</span><span><b>{r.subcategory || r.category}</b><small>{r.category} · {r.source}</small></span><strong>{formatINR(r.amount)}</strong></div>)}{!rows.length && <div className="empty">No little things found.</div>}</div><p className="privacy"><Leaf size={16}/> {data.meta.privacy}</p></main>
+  const [q, setQ] = useState(''); const [source, setSource] = useState('all')
+  const rows = useMemo(() => data.rows.filter(r => (source === 'all' || r.source === source) && `${r.category} ${r.subcategory} ${r.note}`.toLowerCase().includes(q.toLowerCase())).slice(0, 100), [data.rows, q, source])
+  return <main className="page explore" id="main-content"><div className="page-intro"><div><p className="eyebrow">PATTERN 02 / GET CURIOUS</p><h1>Look a little<br/><em>closer.</em></h1></div><p className="lede">Search the tiny moments that make up the bigger picture. Identity never arrives here.</p></div><div className="search"><label className="sr-only" htmlFor="receipt-search">Search receipts</label><span aria-hidden="true">⌕</span><input id="receipt-search" value={q} onChange={e => setQ(e.target.value)} placeholder="Try “food”, “travel”, or “online shopping”..." /><Download size={17}/></div><div className="filters" role="group" aria-label="Receipt source filters"><button className={source === 'all' ? 'filter active' : 'filter'} onClick={() => setSource('all')}>All</button><button className={source === 'household' ? 'filter active' : 'filter'} onClick={() => setSource('household')}>Household</button><button className={source === 'card' ? 'filter active' : 'filter'} onClick={() => setSource('card')}>Card</button></div><p className="result-count" aria-live="polite">{rows.length} receipts shown</p><div className="table-wrap"><div className="table-head"><span>WHEN</span><span>THE LITTLE THING</span><span>HOW MUCH</span></div>{rows.map(r => <div className="table-row" key={r.id}><span>{r.date.split(' ')[0]}</span><span><b>{r.subcategory || r.category}</b><small>{r.category} · {r.source}</small></span><strong>{formatINR(r.amount)}</strong></div>)}{!rows.length && <div className="empty">No little things found.</div>}</div><p className="privacy"><Leaf size={16}/> {data.meta.privacy}</p></main>
 }
 
 createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>)
