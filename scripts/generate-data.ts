@@ -7,6 +7,15 @@ type SpotifyEvent = { ts?: string; platform?: string; ms_played?: string; skippe
 const root = process.cwd()
 const outDir = path.join(root, 'public', 'data')
 fs.mkdirSync(outDir, { recursive: true })
+const requiredInputs = [
+  path.join(root, 'Dataset', 'Daily Household Transactions.csv'),
+  path.join(root, 'Dataset1', 'Augmented_IndiaTransactMultiFacet2024.csv'),
+  path.join(root, 'Dataset2', 'spotify_history.csv')
+]
+if (!requiredInputs.every(file => fs.existsSync(file))) {
+  console.log('Raw datasets are not present; keeping committed public/data artifacts for static deployment.')
+  process.exit(0)
+}
 const readCsv = <T extends Record<string, string>>(file: string) => Papa.parse<T>(fs.readFileSync(path.join(root, file), 'utf8'), { header: true, skipEmptyLines: true }).data
 const yearOf = (value: string) => { const match = value.match(/\d{4}/); return match ? Number(match[0]) : 0 }
 const cleanCategory = (value: string | undefined, fallback: string) => (value || fallback).trim().toLowerCase().replace(/_/g, ' ').replace(/\s+/g, ' ')
