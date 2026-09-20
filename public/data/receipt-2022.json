@@ -1,0 +1,32 @@
+{
+  "year": 2022,
+  "total": 2275598,
+  "count": 449,
+  "lines": [
+    {
+      "category": "online shopping",
+      "amount": 641308,
+      "count": 131
+    },
+    {
+      "category": "travel",
+      "amount": 549627,
+      "count": 102
+    },
+    {
+      "category": "entertainment",
+      "amount": 504356,
+      "count": 99
+    },
+    {
+      "category": "fitness and medical",
+      "amount": 367432,
+      "count": 78
+    },
+    {
+      "category": "other card purchase",
+      "amount": 212874,
+      "count": 39
+    }
+  ]
+}

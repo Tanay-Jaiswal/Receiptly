@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-09-20T06:24:26.154Z",
+  "privacy": "PII-safe presentation payload. Names, accounts, addresses, coordinates and track identifiers are excluded.",
+  "sources": [
+    {
+      "id": "household",
+      "label": "Household transactions",
+      "file": "Dataset/Daily Household Transactions.csv",
+      "records": 2461,
+      "years": [
+        2018,
+        2017,
+        2016,
+        2015
+      ]
+    },
+    {
+      "id": "card",
+      "label": "Card transactions",
+      "file": "Dataset1/Augmented_IndiaTransactMultiFacet2024.csv",
+      "records": 9516,
+      "years": [
+        2023,
+        2024,
+        2022
+      ]
+    },
+    {
+      "id": "spotify",
+      "label": "Listening history",
+      "file": "Dataset2/spotify_history.csv",
+      "records": 148389,
+      "years": [
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    }
+  ],
+  "dedupedRecords": 3802
+}

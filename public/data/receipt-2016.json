@@ -1,0 +1,87 @@
+{
+  "year": 2016,
+  "total": 445924,
+  "count": 302,
+  "lines": [
+    {
+      "category": "investment",
+      "amount": 217858,
+      "count": 49
+    },
+    {
+      "category": "money transfer",
+      "amount": 130000,
+      "count": 12
+    },
+    {
+      "category": "household",
+      "amount": 20777,
+      "count": 7
+    },
+    {
+      "category": "subscription",
+      "amount": 17074,
+      "count": 47
+    },
+    {
+      "category": "transportation",
+      "amount": 15063,
+      "count": 31
+    },
+    {
+      "category": "family",
+      "amount": 13157,
+      "count": 14
+    },
+    {
+      "category": "food",
+      "amount": 11038,
+      "count": 83
+    },
+    {
+      "category": "other",
+      "amount": 6878,
+      "count": 27
+    },
+    {
+      "category": "gift",
+      "amount": 5006,
+      "count": 5
+    },
+    {
+      "category": "festivals",
+      "amount": 4060,
+      "count": 7
+    },
+    {
+      "category": "health",
+      "amount": 2219,
+      "count": 11
+    },
+    {
+      "category": "recurring deposit",
+      "amount": 2000,
+      "count": 2
+    },
+    {
+      "category": "grooming",
+      "amount": 400,
+      "count": 4
+    },
+    {
+      "category": "apparel",
+      "amount": 200,
+      "count": 1
+    },
+    {
+      "category": "beauty",
+      "amount": 174,
+      "count": 1
+    },
+    {
+      "category": "education",
+      "amount": 20,
+      "count": 1
+    }
+  ]
+}

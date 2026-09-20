@@ -1,0 +1,26 @@
+[
+  {
+    "id": "largest-category",
+    "label": "The loudest ritual",
+    "title": "travel",
+    "value": "19%",
+    "description": "of your combined outflow gathers here.",
+    "tone": "coral"
+  },
+  {
+    "id": "card-footprint",
+    "label": "A second pocket",
+    "title": "Card purchases",
+    "value": "79%",
+    "description": "of the money story comes from Dataset 1.",
+    "tone": "green"
+  },
+  {
+    "id": "listening",
+    "label": "A soundtrack",
+    "title": "The Beatles",
+    "value": "5287h",
+    "description": "of listening, across a year of small moments.",
+    "tone": "gold"
+  }
+]

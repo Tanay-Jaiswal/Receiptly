@@ -1,0 +1,476 @@
+{
+  "2015": {
+    "year": 2015,
+    "total": 421968,
+    "count": 381,
+    "lines": [
+      {
+        "category": "money transfer",
+        "amount": 132000,
+        "count": 10
+      },
+      {
+        "category": "public provident fund",
+        "amount": 90000,
+        "count": 8
+      },
+      {
+        "category": "other",
+        "amount": 61292,
+        "count": 55
+      },
+      {
+        "category": "investment",
+        "amount": 30000,
+        "count": 30
+      },
+      {
+        "category": "recurring deposit",
+        "amount": 20000,
+        "count": 20
+      },
+      {
+        "category": "food",
+        "amount": 15564,
+        "count": 147
+      },
+      {
+        "category": "transportation",
+        "amount": 12648,
+        "count": 48
+      },
+      {
+        "category": "cook",
+        "amount": 12443,
+        "count": 4
+      },
+      {
+        "category": "health",
+        "amount": 12191,
+        "count": 18
+      },
+      {
+        "category": "rent",
+        "amount": 10709,
+        "count": 4
+      },
+      {
+        "category": "gift",
+        "amount": 10518,
+        "count": 4
+      },
+      {
+        "category": "household",
+        "amount": 7864,
+        "count": 10
+      },
+      {
+        "category": "apparel",
+        "amount": 3285,
+        "count": 9
+      },
+      {
+        "category": "beauty",
+        "amount": 2200,
+        "count": 5
+      },
+      {
+        "category": "maid",
+        "amount": 999,
+        "count": 3
+      },
+      {
+        "category": "water (jar /tanker)",
+        "amount": 148,
+        "count": 3
+      },
+      {
+        "category": "garbage disposal",
+        "amount": 67,
+        "count": 2
+      },
+      {
+        "category": "culture",
+        "amount": 40,
+        "count": 1
+      }
+    ]
+  },
+  "2016": {
+    "year": 2016,
+    "total": 445924,
+    "count": 302,
+    "lines": [
+      {
+        "category": "investment",
+        "amount": 217858,
+        "count": 49
+      },
+      {
+        "category": "money transfer",
+        "amount": 130000,
+        "count": 12
+      },
+      {
+        "category": "household",
+        "amount": 20777,
+        "count": 7
+      },
+      {
+        "category": "subscription",
+        "amount": 17074,
+        "count": 47
+      },
+      {
+        "category": "transportation",
+        "amount": 15063,
+        "count": 31
+      },
+      {
+        "category": "family",
+        "amount": 13157,
+        "count": 14
+      },
+      {
+        "category": "food",
+        "amount": 11038,
+        "count": 83
+      },
+      {
+        "category": "other",
+        "amount": 6878,
+        "count": 27
+      },
+      {
+        "category": "gift",
+        "amount": 5006,
+        "count": 5
+      },
+      {
+        "category": "festivals",
+        "amount": 4060,
+        "count": 7
+      },
+      {
+        "category": "health",
+        "amount": 2219,
+        "count": 11
+      },
+      {
+        "category": "recurring deposit",
+        "amount": 2000,
+        "count": 2
+      },
+      {
+        "category": "grooming",
+        "amount": 400,
+        "count": 4
+      },
+      {
+        "category": "apparel",
+        "amount": 200,
+        "count": 1
+      },
+      {
+        "category": "beauty",
+        "amount": 174,
+        "count": 1
+      },
+      {
+        "category": "education",
+        "amount": 20,
+        "count": 1
+      }
+    ]
+  },
+  "2017": {
+    "year": 2017,
+    "total": 652253,
+    "count": 879,
+    "lines": [
+      {
+        "category": "money transfer",
+        "amount": 210023,
+        "count": 13
+      },
+      {
+        "category": "subscription",
+        "amount": 86906,
+        "count": 62
+      },
+      {
+        "category": "tourism",
+        "amount": 63300,
+        "count": 4
+      },
+      {
+        "category": "household",
+        "amount": 61525,
+        "count": 89
+      },
+      {
+        "category": "family",
+        "amount": 47390,
+        "count": 28
+      },
+      {
+        "category": "food",
+        "amount": 40896,
+        "count": 393
+      },
+      {
+        "category": "health",
+        "amount": 38567,
+        "count": 41
+      },
+      {
+        "category": "transportation",
+        "amount": 34767,
+        "count": 143
+      },
+      {
+        "category": "gift",
+        "amount": 23776,
+        "count": 18
+      },
+      {
+        "category": "apparel",
+        "amount": 14870,
+        "count": 19
+      },
+      {
+        "category": "maid",
+        "amount": 11840,
+        "count": 8
+      },
+      {
+        "category": "other",
+        "amount": 11129,
+        "count": 23
+      },
+      {
+        "category": "culture",
+        "amount": 2910,
+        "count": 6
+      },
+      {
+        "category": "festivals",
+        "amount": 1580,
+        "count": 6
+      },
+      {
+        "category": "beauty",
+        "amount": 1345,
+        "count": 11
+      },
+      {
+        "category": "self-development",
+        "amount": 950,
+        "count": 1
+      },
+      {
+        "category": "education",
+        "amount": 480,
+        "count": 14
+      }
+    ]
+  },
+  "2018": {
+    "year": 2018,
+    "total": 412598,
+    "count": 569,
+    "lines": [
+      {
+        "category": "money transfer",
+        "amount": 134506,
+        "count": 8
+      },
+      {
+        "category": "transportation",
+        "amount": 106214,
+        "count": 73
+      },
+      {
+        "category": "household",
+        "amount": 71480,
+        "count": 70
+      },
+      {
+        "category": "food",
+        "amount": 28620,
+        "count": 275
+      },
+      {
+        "category": "family",
+        "amount": 18035,
+        "count": 29
+      },
+      {
+        "category": "health",
+        "amount": 13276,
+        "count": 24
+      },
+      {
+        "category": "subscription",
+        "amount": 10608,
+        "count": 34
+      },
+      {
+        "category": "maid",
+        "amount": 9000,
+        "count": 6
+      },
+      {
+        "category": "other",
+        "amount": 7727,
+        "count": 9
+      },
+      {
+        "category": "apparel",
+        "amount": 7019,
+        "count": 18
+      },
+      {
+        "category": "self-development",
+        "amount": 1407,
+        "count": 1
+      },
+      {
+        "category": "culture",
+        "amount": 1354,
+        "count": 4
+      },
+      {
+        "category": "festivals",
+        "amount": 1271,
+        "count": 3
+      },
+      {
+        "category": "gift",
+        "amount": 868,
+        "count": 3
+      },
+      {
+        "category": "beauty",
+        "amount": 470,
+        "count": 5
+      },
+      {
+        "category": "tourism",
+        "amount": 309,
+        "count": 1
+      },
+      {
+        "category": "social life",
+        "amount": 298,
+        "count": 1
+      },
+      {
+        "category": "documents",
+        "amount": 100,
+        "count": 2
+      },
+      {
+        "category": "education",
+        "amount": 37,
+        "count": 3
+      }
+    ]
+  },
+  "2022": {
+    "year": 2022,
+    "total": 2275598,
+    "count": 449,
+    "lines": [
+      {
+        "category": "online shopping",
+        "amount": 641308,
+        "count": 131
+      },
+      {
+        "category": "travel",
+        "amount": 549627,
+        "count": 102
+      },
+      {
+        "category": "entertainment",
+        "amount": 504356,
+        "count": 99
+      },
+      {
+        "category": "fitness and medical",
+        "amount": 367432,
+        "count": 78
+      },
+      {
+        "category": "other card purchase",
+        "amount": 212874,
+        "count": 39
+      }
+    ]
+  },
+  "2023": {
+    "year": 2023,
+    "total": 3267092,
+    "count": 640,
+    "lines": [
+      {
+        "category": "travel",
+        "amount": 804211,
+        "count": 150
+      },
+      {
+        "category": "fitness and medical",
+        "amount": 761951,
+        "count": 153
+      },
+      {
+        "category": "entertainment",
+        "amount": 743256,
+        "count": 148
+      },
+      {
+        "category": "online shopping",
+        "amount": 705743,
+        "count": 141
+      },
+      {
+        "category": "other card purchase",
+        "amount": 251931,
+        "count": 48
+      }
+    ]
+  },
+  "2024": {
+    "year": 2024,
+    "total": 972204,
+    "count": 187,
+    "lines": [
+      {
+        "category": "entertainment",
+        "amount": 240501,
+        "count": 49
+      },
+      {
+        "category": "travel",
+        "amount": 238153,
+        "count": 41
+      },
+      {
+        "category": "fitness and medical",
+        "amount": 224687,
+        "count": 45
+      },
+      {
+        "category": "online shopping",
+        "amount": 207069,
+        "count": 39
+      },
+      {
+        "category": "other card purchase",
+        "amount": 61794,
+        "count": 13
+      }
+    ]
+  }
+}

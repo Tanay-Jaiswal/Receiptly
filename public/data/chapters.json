@@ -1,0 +1,34 @@
+[
+  {
+    "id": "opening",
+    "kicker": "A RECEIPT FOR THE WHOLE SELF",
+    "title": "Three datasets.<br/>One very human <em>shape.</em>",
+    "body": "Your household choices, card swipes and listening rituals are different kinds of evidence. Together, they make a softer picture of a year.",
+    "metric": "3,802 combined moments",
+    "source": "all"
+  },
+  {
+    "id": "spending",
+    "kicker": "CHAPTER 01 / THE EVERYDAY",
+    "title": "The little things<br/>do the <em>talking.</em>",
+    "body": "Most of a spending story is made from ordinary categories — the repeatable, easy-to-miss rituals that keep a day moving.",
+    "metric": "₹90,10,480 outflow",
+    "source": "household + card"
+  },
+  {
+    "id": "card",
+    "kicker": "CHAPTER 02 / A SECOND POCKET",
+    "title": "Some choices<br/>arrive by <em>card.</em>",
+    "body": "The card dataset adds another lens: a wider, more varied set of purchases. We keep only category, date and amount — never identity.",
+    "metric": "9,516 card moments",
+    "source": "card"
+  },
+  {
+    "id": "soundtrack",
+    "kicker": "CHAPTER 03 / THE SOUNDTRACK",
+    "title": "And every day<br/>has a <em>rhythm.</em>",
+    "body": "The listening history is not spending at all. It is context: the songs, skips and platforms that give the numbers a little weather.",
+    "metric": "5287 listening hours",
+    "source": "spotify"
+  }
+]

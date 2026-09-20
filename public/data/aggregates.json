@@ -1,0 +1,280 @@
+{
+  "spendTotal": 9010480,
+  "spendCount": 3523,
+  "categories": [
+    {
+      "name": "travel",
+      "amount": 1687621,
+      "share": 19
+    },
+    {
+      "name": "online shopping",
+      "amount": 1681312,
+      "share": 19
+    },
+    {
+      "name": "entertainment",
+      "amount": 1664175,
+      "share": 18
+    },
+    {
+      "name": "fitness and medical",
+      "amount": 1476326,
+      "share": 16
+    },
+    {
+      "name": "money transfer",
+      "amount": 606529,
+      "share": 7
+    },
+    {
+      "name": "other card purchase",
+      "amount": 568302,
+      "share": 6
+    },
+    {
+      "name": "investment",
+      "amount": 247858,
+      "share": 3
+    },
+    {
+      "name": "transportation",
+      "amount": 168692,
+      "share": 2
+    },
+    {
+      "name": "household",
+      "amount": 161646,
+      "share": 2
+    },
+    {
+      "name": "subscription",
+      "amount": 114588,
+      "share": 1
+    },
+    {
+      "name": "food",
+      "amount": 96117,
+      "share": 1
+    },
+    {
+      "name": "public provident fund",
+      "amount": 90000,
+      "share": 1
+    },
+    {
+      "name": "other",
+      "amount": 87025,
+      "share": 1
+    },
+    {
+      "name": "family",
+      "amount": 78582,
+      "share": 1
+    },
+    {
+      "name": "health",
+      "amount": 66253,
+      "share": 1
+    },
+    {
+      "name": "tourism",
+      "amount": 63609,
+      "share": 1
+    },
+    {
+      "name": "gift",
+      "amount": 40168,
+      "share": 0
+    },
+    {
+      "name": "apparel",
+      "amount": 25374,
+      "share": 0
+    },
+    {
+      "name": "recurring deposit",
+      "amount": 22000,
+      "share": 0
+    },
+    {
+      "name": "maid",
+      "amount": 21839,
+      "share": 0
+    },
+    {
+      "name": "cook",
+      "amount": 12443,
+      "share": 0
+    },
+    {
+      "name": "rent",
+      "amount": 10709,
+      "share": 0
+    },
+    {
+      "name": "festivals",
+      "amount": 6911,
+      "share": 0
+    },
+    {
+      "name": "culture",
+      "amount": 4304,
+      "share": 0
+    },
+    {
+      "name": "beauty",
+      "amount": 4189,
+      "share": 0
+    },
+    {
+      "name": "self-development",
+      "amount": 2357,
+      "share": 0
+    },
+    {
+      "name": "education",
+      "amount": 537,
+      "share": 0
+    },
+    {
+      "name": "grooming",
+      "amount": 400,
+      "share": 0
+    },
+    {
+      "name": "social life",
+      "amount": 298,
+      "share": 0
+    },
+    {
+      "name": "water (jar /tanker)",
+      "amount": 148,
+      "share": 0
+    },
+    {
+      "name": "documents",
+      "amount": 100,
+      "share": 0
+    },
+    {
+      "name": "garbage disposal",
+      "amount": 67,
+      "share": 0
+    }
+  ],
+  "sourceTotals": [
+    {
+      "name": "card",
+      "amount": 7077737,
+      "share": 79
+    },
+    {
+      "name": "household",
+      "amount": 1932743,
+      "share": 21
+    }
+  ],
+  "yearTotals": [
+    {
+      "name": "2023",
+      "amount": 3267092,
+      "share": 36
+    },
+    {
+      "name": "2022",
+      "amount": 2275598,
+      "share": 25
+    },
+    {
+      "name": "2024",
+      "amount": 972204,
+      "share": 11
+    },
+    {
+      "name": "2017",
+      "amount": 652253,
+      "share": 7
+    },
+    {
+      "name": "2016",
+      "amount": 445924,
+      "share": 5
+    },
+    {
+      "name": "2015",
+      "amount": 421968,
+      "share": 5
+    },
+    {
+      "name": "2018",
+      "amount": 412598,
+      "share": 5
+    }
+  ],
+  "spotify": {
+    "streams": 148389,
+    "minutes": 317244,
+    "skipRate": 5,
+    "platforms": [
+      {
+        "name": "android",
+        "count": 139281
+      },
+      {
+        "name": "iOS",
+        "count": 3045
+      },
+      {
+        "name": "cast to device",
+        "count": 3015
+      },
+      {
+        "name": "windows",
+        "count": 1690
+      },
+      {
+        "name": "mac",
+        "count": 1176
+      },
+      {
+        "name": "web player",
+        "count": 182
+      }
+    ],
+    "topArtists": [
+      {
+        "name": "The Beatles",
+        "count": 13507
+      },
+      {
+        "name": "The Killers",
+        "count": 6715
+      },
+      {
+        "name": "John Mayer",
+        "count": 4791
+      },
+      {
+        "name": "Bob Dylan",
+        "count": 3784
+      },
+      {
+        "name": "Paul McCartney",
+        "count": 2684
+      },
+      {
+        "name": "Led Zeppelin",
+        "count": 2470
+      },
+      {
+        "name": "Johnny Cash",
+        "count": 2465
+      },
+      {
+        "name": "The Rolling Stones",
+        "count": 2365
+      }
+    ]
+  }
+}

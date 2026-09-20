@@ -1,0 +1,102 @@
+{
+  "year": 2018,
+  "total": 412598,
+  "count": 569,
+  "lines": [
+    {
+      "category": "money transfer",
+      "amount": 134506,
+      "count": 8
+    },
+    {
+      "category": "transportation",
+      "amount": 106214,
+      "count": 73
+    },
+    {
+      "category": "household",
+      "amount": 71480,
+      "count": 70
+    },
+    {
+      "category": "food",
+      "amount": 28620,
+      "count": 275
+    },
+    {
+      "category": "family",
+      "amount": 18035,
+      "count": 29
+    },
+    {
+      "category": "health",
+      "amount": 13276,
+      "count": 24
+    },
+    {
+      "category": "subscription",
+      "amount": 10608,
+      "count": 34
+    },
+    {
+      "category": "maid",
+      "amount": 9000,
+      "count": 6
+    },
+    {
+      "category": "other",
+      "amount": 7727,
+      "count": 9
+    },
+    {
+      "category": "apparel",
+      "amount": 7019,
+      "count": 18
+    },
+    {
+      "category": "self-development",
+      "amount": 1407,
+      "count": 1
+    },
+    {
+      "category": "culture",
+      "amount": 1354,
+      "count": 4
+    },
+    {
+      "category": "festivals",
+      "amount": 1271,
+      "count": 3
+    },
+    {
+      "category": "gift",
+      "amount": 868,
+      "count": 3
+    },
+    {
+      "category": "beauty",
+      "amount": 470,
+      "count": 5
+    },
+    {
+      "category": "tourism",
+      "amount": 309,
+      "count": 1
+    },
+    {
+      "category": "social life",
+      "amount": 298,
+      "count": 1
+    },
+    {
+      "category": "documents",
+      "amount": 100,
+      "count": 2
+    },
+    {
+      "category": "education",
+      "amount": 37,
+      "count": 3
+    }
+  ]
+}

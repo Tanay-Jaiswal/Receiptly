@@ -1,0 +1,33 @@
+{
+  "name": "receiptly",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run generate:data && tsc -b && vite build",
+    "typecheck": "tsc -b",
+    "lint": "tsc -b --pretty false",
+    "test": "vitest run",
+    "generate:data": "tsx scripts/generate-data.ts"
+  },
+  "dependencies": {
+    "date-fns": "4.4.0",
+    "lucide-react": "latest",
+    "motion": "13.4.0",
+    "papaparse": "5.7.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tailwindcss": "4.3.3",
+    "vite": "8.3.0"
+  },
+  "devDependencies": {
+    "@types/papaparse": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "tsx": "latest",
+    "typescript": "7.0.2",
+    "vitest": "5.0.1"
+  }
+}

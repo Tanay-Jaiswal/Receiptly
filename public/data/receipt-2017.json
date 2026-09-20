@@ -1,0 +1,92 @@
+{
+  "year": 2017,
+  "total": 652253,
+  "count": 879,
+  "lines": [
+    {
+      "category": "money transfer",
+      "amount": 210023,
+      "count": 13
+    },
+    {
+      "category": "subscription",
+      "amount": 86906,
+      "count": 62
+    },
+    {
+      "category": "tourism",
+      "amount": 63300,
+      "count": 4
+    },
+    {
+      "category": "household",
+      "amount": 61525,
+      "count": 89
+    },
+    {
+      "category": "family",
+      "amount": 47390,
+      "count": 28
+    },
+    {
+      "category": "food",
+      "amount": 40896,
+      "count": 393
+    },
+    {
+      "category": "health",
+      "amount": 38567,
+      "count": 41
+    },
+    {
+      "category": "transportation",
+      "amount": 34767,
+      "count": 143
+    },
+    {
+      "category": "gift",
+      "amount": 23776,
+      "count": 18
+    },
+    {
+      "category": "apparel",
+      "amount": 14870,
+      "count": 19
+    },
+    {
+      "category": "maid",
+      "amount": 11840,
+      "count": 8
+    },
+    {
+      "category": "other",
+      "amount": 11129,
+      "count": 23
+    },
+    {
+      "category": "culture",
+      "amount": 2910,
+      "count": 6
+    },
+    {
+      "category": "festivals",
+      "amount": 1580,
+      "count": 6
+    },
+    {
+      "category": "beauty",
+      "amount": 1345,
+      "count": 11
+    },
+    {
+      "category": "self-development",
+      "amount": 950,
+      "count": 1
+    },
+    {
+      "category": "education",
+      "amount": 480,
+      "count": 14
+    }
+  ]
+}

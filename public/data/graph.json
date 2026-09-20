@@ -1,0 +1,71 @@
+{
+  "nodes": [
+    {
+      "id": "household",
+      "label": "Household",
+      "type": "source"
+    },
+    {
+      "id": "card",
+      "label": "Card",
+      "type": "source"
+    },
+    {
+      "id": "spotify",
+      "label": "Listening",
+      "type": "source"
+    },
+    {
+      "id": "travel",
+      "label": "travel",
+      "type": "category"
+    },
+    {
+      "id": "online shopping",
+      "label": "online shopping",
+      "type": "category"
+    },
+    {
+      "id": "entertainment",
+      "label": "entertainment",
+      "type": "category"
+    },
+    {
+      "id": "fitness and medical",
+      "label": "fitness and medical",
+      "type": "category"
+    },
+    {
+      "id": "money transfer",
+      "label": "money transfer",
+      "type": "category"
+    },
+    {
+      "id": "other card purchase",
+      "label": "other card purchase",
+      "type": "category"
+    },
+    {
+      "id": "investment",
+      "label": "investment",
+      "type": "category"
+    },
+    {
+      "id": "transportation",
+      "label": "transportation",
+      "type": "category"
+    }
+  ],
+  "links": [
+    {
+      "source": "card",
+      "target": "online shopping",
+      "value": 7077737
+    },
+    {
+      "source": "household",
+      "target": "travel",
+      "value": 1932743
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "year": 2015,
+  "total": 421968,
+  "count": 381,
+  "lines": [
+    {
+      "category": "money transfer",
+      "amount": 132000,
+      "count": 10
+    },
+    {
+      "category": "public provident fund",
+      "amount": 90000,
+      "count": 8
+    },
+    {
+      "category": "other",
+      "amount": 61292,
+      "count": 55
+    },
+    {
+      "category": "investment",
+      "amount": 30000,
+      "count": 30
+    },
+    {
+      "category": "recurring deposit",
+      "amount": 20000,
+      "count": 20
+    },
+    {
+      "category": "food",
+      "amount": 15564,
+      "count": 147
+    },
+    {
+      "category": "transportation",
+      "amount": 12648,
+      "count": 48
+    },
+    {
+      "category": "cook",
+      "amount": 12443,
+      "count": 4
+    },
+    {
+      "category": "health",
+      "amount": 12191,
+      "count": 18
+    },
+    {
+      "category": "rent",
+      "amount": 10709,
+      "count": 4
+    },
+    {
+      "category": "gift",
+      "amount": 10518,
+      "count": 4
+    },
+    {
+      "category": "household",
+      "amount": 7864,
+      "count": 10
+    },
+    {
+      "category": "apparel",
+      "amount": 3285,
+      "count": 9
+    },
+    {
+      "category": "beauty",
+      "amount": 2200,
+      "count": 5
+    },
+    {
+      "category": "maid",
+      "amount": 999,
+      "count": 3
+    },
+    {
+      "category": "water (jar /tanker)",
+      "amount": 148,
+      "count": 3
+    },
+    {
+      "category": "garbage disposal",
+      "amount": 67,
+      "count": 2
+    },
+    {
+      "category": "culture",
+      "amount": 40,
+      "count": 1
+    }
+  ]
+}

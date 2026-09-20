@@ -1,0 +1,32 @@
+{
+  "year": 2023,
+  "total": 3267092,
+  "count": 640,
+  "lines": [
+    {
+      "category": "travel",
+      "amount": 804211,
+      "count": 150
+    },
+    {
+      "category": "fitness and medical",
+      "amount": 761951,
+      "count": 153
+    },
+    {
+      "category": "entertainment",
+      "amount": 743256,
+      "count": 148
+    },
+    {
+      "category": "online shopping",
+      "amount": 705743,
+      "count": 141
+    },
+    {
+      "category": "other card purchase",
+      "amount": 251931,
+      "count": 48
+    }
+  ]
+}
