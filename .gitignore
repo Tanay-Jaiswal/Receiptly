@@ -1,9 +1,12 @@
 node_modules/
 dist/
 *.tsbuildinfo
+scripts/*.js
+scripts/*.d.ts
+vite.config.js
+vite.config.d.ts
 .env
 .env.*
 Dataset/
 Dataset1/
 Dataset2/
-
