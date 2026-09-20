@@ -1,6 +1,17 @@
 {
-  "generatedAt": "2026-09-20T06:24:26.154Z",
+  "generatedAt": "2026-09-20T06:53:34.156Z",
   "privacy": "PII-safe presentation payload. Names, accounts, addresses, coordinates and track identifiers are excluded.",
+  "dataQuality": {
+    "householdRaw": 2461,
+    "householdExpectedApprox": 2461,
+    "cardValidAfterAmountFilter": 9516,
+    "cardExpectedApprox": 1176,
+    "musicEventsAfterExactDedupe": 148389,
+    "musicListeningDays": 2748,
+    "musicExpectedApproxDays": 2719,
+    "combinedDedupedRows": 3802,
+    "notes": "The card source is intentionally corrupted and contains many repeated rows. Card records are filtered to positive amounts but are not presented as one person. Spotify is aggregated to listening-day metrics for the UI."
+  },
   "sources": [
     {
       "id": "household",

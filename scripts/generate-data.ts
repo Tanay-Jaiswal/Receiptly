@@ -73,7 +73,17 @@ const patterns = [
   { id: 'listening', label: 'A soundtrack', title: topArtist?.[0] || 'Your listening', value: `${Math.round(Object.values(spotifyDays).reduce((s, d) => s + d.minutes, 0) / 60)}h`, description: 'of listening, across a year of small moments.', tone: 'gold' }
 ]
 const payload = {
-  meta: { generatedAt: new Date().toISOString(), privacy: 'PII-safe presentation payload. Names, accounts, addresses, coordinates and track identifiers are excluded.', sources: [
+  meta: { generatedAt: new Date().toISOString(), privacy: 'PII-safe presentation payload. Names, accounts, addresses, coordinates and track identifiers are excluded.', dataQuality: {
+    householdRaw: household.length,
+    householdExpectedApprox: 2461,
+    cardValidAfterAmountFilter: card.length,
+    cardExpectedApprox: 1176,
+    musicEventsAfterExactDedupe: spotifySeen.size,
+    musicListeningDays: Object.keys(spotifyDays).length,
+    musicExpectedApproxDays: 2719,
+    combinedDedupedRows: safeRows.length,
+    notes: 'The card source is intentionally corrupted and contains many repeated rows. Card records are filtered to positive amounts but are not presented as one person. Spotify is aggregated to listening-day metrics for the UI.'
+  }, sources: [
     { id: 'household', label: 'Household transactions', file: 'Dataset/Daily Household Transactions.csv', records: household.length, years: [...new Set(household.map(r => r.year).filter(Boolean))] },
     { id: 'card', label: 'Card transactions', file: 'Dataset1/Augmented_IndiaTransactMultiFacet2024.csv', records: card.length, years: [...new Set(card.map(r => r.year).filter(Boolean))] },
     { id: 'spotify', label: 'Listening history', file: 'Dataset2/spotify_history.csv', records: spotifySeen.size, years: Object.keys(spotifyYears).map(Number) }
@@ -100,3 +110,7 @@ fs.writeFileSync(path.join(outDir, 'graph.json'), JSON.stringify(payload.graph, 
 fs.writeFileSync(path.join(outDir, 'day-index.json'), JSON.stringify(payload.dayIndex))
 fs.writeFileSync(path.join(outDir, 'receipts.json'), JSON.stringify(payload.receipts, null, 2))
 console.log(`Generated ${safeRows.length} deduped rows, ${spotifySeen.size} listening events, ${yearSet.length} yearly receipts`)
+console.log('Data quality report:')
+console.log(`  Household: ${household.length} rows (expected about 2,461)`)
+console.log(`  Card: ${card.length} positive-amount rows (brief reference about 1,176 valid rows)`)
+console.log(`  Spotify: ${Object.keys(spotifyDays).length} listening days from ${spotifySeen.size} deduped events (brief reference about 2,719 days)`)

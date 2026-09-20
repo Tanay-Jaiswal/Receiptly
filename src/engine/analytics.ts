@@ -4,7 +4,22 @@ import type { CategoryTotal, ReceiptRow } from './types'
 export const parseReceiptDate = (value: string): Date | null => {
   const formats = ['dd/MM/yyyy HH:mm:ss', 'dd/MM/yyyy', 'yyyy-MM-dd']
   for (const pattern of formats) { const d = parse(value.trim(), pattern, new Date()); if (isValid(d)) return d }
-  const fallback = new Date(value); return isValid(fallback) ? fallback : null
+  return null
+}
+export const parseCardDate = (value: string): Date | null => {
+  const parsed = parse(value.trim(), 'M/d/yyyy H:mm', new Date())
+  return isValid(parsed) ? parsed : null
+}
+export const realSkipMetric = (event: { reason_end?: string; ms_played?: number; skipped?: boolean }) =>
+  event.reason_end?.toLowerCase() === 'fwdbtn' || (event.ms_played ?? 0) < 30_000 || event.skipped === true
+export const dedupeByFields = <T extends Record<string, unknown>>(rows: T[], fields: (keyof T)[]) => {
+  const seen = new Set<string>()
+  return rows.filter(row => {
+    const key = fields.map(field => String(row[field] ?? '')).join('\u001f')
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
 }
 export const monthLabel = (value: string) => { const d = parseReceiptDate(value); return d ? format(d, 'MMM') : '—' }
 export const sumExpenses = (rows: ReceiptRow[]) => rows.filter(r => r.type.toLowerCase() === 'expense').reduce((sum, r) => sum + r.amount, 0)
